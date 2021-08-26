@@ -1,0 +1,25 @@
+{
+    "compilerOptions": {
+        "outDir": "build/dist", // 指定输出文件夹 ,默认为'dist'
+        "module": "esnext", // 用来指定要使用的模板标准
+        "target": "esnext", // 用于指定编译之后的版本目录
+        "lib": ["esnext", "dom"], // 用于指定要包含在编译中的库文件
+        "sourceMap": true, // 用来指定编译时是否生成.map文件
+        "baseUrl": ".", // 设置解析非相对模块名称的基本目录，相对模块不会受到baseUrl的影响
+        "jsx": "preserve", // 用于指定jsx代码用于的开发环境'preserve','react-native','react'
+        "allowSyntheticDefaultImports": true, // 指定允许从没有默认导出的模块中默认导入
+        "moduleResolution": "node", // 用于选择模块解析策略，有"node"和"classic"两种类型
+        "forceConsistentCasingInFileNames": true, // 文件名是否区分大小写
+        "noImplicitReturns": true, // 检查函数没有隐式的返回值，默认false
+        "noUnusedLocals": true, // 检查只声明、未使用的局部变量
+        "suppressImplicitAnyIndexErrors": true, // 支持任意类型充当索引
+        "allowJs": true, // 允许编译js 文件
+        "skipLibCheck": true, // 跳过声明文件的检查
+        "experimentalDecorators": true, // 否启用实验性的装饰器特性
+        "strict": true, // 开启严格模式
+        "paths": {
+            "@/*": ["./src/*"] // 用于设置模块名到基于baseUrl的路径映射
+        }
+    },
+    "exclude": ["node_modules", "build", "dist", "scripts", "webpack", "jest"] //表示要排除的的文件
+}
